@@ -1,134 +1,175 @@
-![React email cover](https://react.email/static/covers/react-email.png)
+# React Email + Resend - Sistema de Envío Masivo
 
-<div align="center"><strong>React Email</strong></div>
-<div align="center">The next generation of writing emails.<br />High-quality, unstyled components for creating emails.</div>
+![React Email](https://react.email/static/covers/react-email.png)
+
+<div align="center"><strong>Sistema de Envío Masivo de Emails</strong></div>
+<div align="center">Plataforma completa para crear y enviar emails masivos usando React Email y Resend API.<br />Incluye editor visual, templates personalizados y API REST.</div>
 <br />
 <div align="center">
-<a href="https://react.email">Website</a>
+<a href="https://resend.growthbdm.com">Demo en Vivo</a>
 <span> · </span>
-<a href="https://github.com/resend/react-email">GitHub</a>
+<a href="https://github.com/resend/react-email">React Email</a>
+<span> · </span>
+<a href="https://resend.com">Resend</a>
 </div>
 
-## Introduction
+## 🚀 Características
 
-A collection of high-quality, unstyled components for creating beautiful emails using React and TypeScript.
-It reduces the pain of coding responsive emails with dark mode support. It also takes care of inconsistencies between Gmail, Outlook, and other email clients for you.
+- **Editor Visual**: Interfaz web para crear y editar templates de email
+- **Templates Personalizados**: Biblioteca de templates responsive con React
+- **Envío Masivo**: API REST para enviar emails a listas de destinatarios
+- **Resend Integration**: Integración completa con Resend API
+- **Dark Mode**: Soporte para modo oscuro en emails
+- **Responsive Design**: Templates optimizados para todos los dispositivos
+- **Rate Limiting**: Control de límites de envío para evitar spam
+- **Error Handling**: Manejo robusto de errores y reintentos
 
-## Why
+## 🛠️ Tecnologías
 
-We believe that email is an extremely important medium for people to communicate. However, we need to stop developing emails like 2010, and rethink how email can be done in 2022 and beyond. Email development needs a revamp. A renovation. Modernized for the way we build web apps today.
+- **Frontend**: Next.js 15, React 19, TypeScript
+- **Email Engine**: React Email
+- **Email Service**: Resend API
+- **Styling**: Tailwind CSS, Radix UI
+- **Deployment**: Vercel
 
-## Install
+## 📦 Instalación
 
-Install one of the components from your command line.
-
-#### With yarn
-
-```sh
-yarn add @react-email/components -E
+1. Clona el repositorio:
+```bash
+git clone <repository-url>
+cd resend-react/react-email
 ```
 
-#### With npm
-
-```sh
-npm install @react-email/components -E
-```
-
-#### With pnpm
-
-```sh
-pnpm install @react-email/components -E
-```
-
-## Getting started
-
-Add the component to your email template. Include styles where needed.
-
-```jsx
-import { Button } from "@react-email/components";
-
-const Email = () => {
-  return (
-    <Button href="https://example.com" style={{ color: "#61dafb" }}>
-      Click me
-    </Button>
-  );
-};
-```
-
-## Components
-
-A set of standard components to help you build amazing emails without having to deal with the mess of creating table-based layouts and maintaining archaic markup.
-
-- [Body](https://github.com/resend/react-email/tree/main/packages/body)
-- [Button](https://github.com/resend/react-email/tree/main/packages/button)
-- [CodeBlock](https://github.com/resend/react-email/tree/main/packages/code-block)
-- [CodeInline](https://github.com/resend/react-email/tree/main/packages/code-inline)
-- [Column](https://github.com/resend/react-email/tree/main/packages/column)
-- [Container](https://github.com/resend/react-email/tree/main/packages/container)
-- [Divider](https://github.com/resend/react-email/tree/main/packages/hr)
-- [Font](https://github.com/resend/react-email/tree/main/packages/font)
-- [Head](https://github.com/resend/react-email/tree/main/packages/head)
-- [Heading](https://github.com/resend/react-email/tree/main/packages/heading)
-- [Html](https://github.com/resend/react-email/tree/main/packages/html)
-- [Image](https://github.com/resend/react-email/tree/main/packages/img)
-- [Link](https://github.com/resend/react-email/tree/main/packages/link)
-- [Markdown](https://github.com/resend/react-email/tree/main/packages/markdown)
-- [Paragraph](https://github.com/resend/react-email/tree/main/packages/text)
-- [Preview](https://github.com/resend/react-email/tree/main/packages/preview)
-- [Section](https://github.com/resend/react-email/tree/main/packages/section)
-
-## Integrations
-
-Emails built with React Email can be converted into HTML and sent using any email service provider. Here are some examples:
-
-- [Resend](https://github.com/resend/react-email/tree/main/examples/resend)
-- [Nodemailer](https://github.com/resend/react-email/tree/main/examples/nodemailer)
-- [SendGrid](https://github.com/resend/react-email/tree/main/examples/sendgrid)
-- [Postmark](https://github.com/resend/react-email/tree/main/examples/postmark)
-- [AWS SES](https://github.com/resend/react-email/tree/main/examples/aws-ses)
-- [Plunk](https://github.com/resend/react-email/tree/main/examples/plunk)
-- [Scaleway](https://github.com/resend/react-email/tree/main/examples/scaleway)
-
-## Support
-
-All components were tested using the most popular email clients.
-
-| <img src="https://react.email/static/icons/gmail.svg" width="48px" height="48px" alt="Gmail logo"> | <img src="https://react.email/static/icons/apple-mail.svg" width="48px" height="48px" alt="Apple Mail"> | <img src="https://react.email/static/icons/outlook.svg" width="48px" height="48px" alt="Outlook logo"> | <img src="https://react.email/static/icons/yahoo-mail.svg" width="48px" height="48px" alt="Yahoo! Mail logo"> | <img src="https://react.email/static/icons/hey.svg" width="48px" height="48px" alt="HEY logo"> | <img src="https://react.email/static/icons/superhuman.svg" width="48px" height="48px" alt="Superhuman logo"> |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| Gmail ✔                                                                                           | Apple Mail ✔                                                                                           | Outlook ✔                                                                                             | Yahoo! Mail ✔                                                                                                | HEY ✔                                                                                         | Superhuman ✔                                                                                                |
-
-## Development
-
-#### Install dependencies
-
-```sh
+2. Instala las dependencias:
+```bash
 pnpm install
 ```
 
-#### Build
-
-```sh
-pnpm build
+3. Configura las variables de entorno:
+```bash
+cp .env.example .env.local
 ```
 
-#### Run packages
+Edita `.env.local` con tus credenciales:
+```env
+RESEND_API_KEY=tu_api_key_de_resend
+NEXT_PUBLIC_APP_URL=http://localhost:3001
+```
 
-```sh
+4. Inicia el servidor de desarrollo:
+```bash
 pnpm dev
 ```
 
-This will initialize all packages in parallel and watch for changes, including the website which will be available at [localhost:3000](http://localhost:3000).
+5. Abre [http://localhost:3001](http://localhost:3001) en tu navegador
 
-## Contributing
+## 🎯 Uso
 
-- [Contribution Guide](https://react.email/docs/contributing)
+### Editor Visual
+Accede a `http://localhost:3001` para usar el editor visual de templates.
 
-## Authors
+### API REST para Envío Masivo
 
-- Bu Kinoshita ([@bukinoshita](https://twitter.com/bukinoshita))
-- Zeno Rocha ([@zenorocha](https://twitter.com/zenorocha))
+**Endpoint**: `POST /api/send/bulk`
 
-## License
+**Payload**:
+```json
+{
+  "recipients": [
+    {
+      "email": "usuario@ejemplo.com",
+      "name": "Nombre Usuario"
+    }
+  ],
+  "template": "marketing-campaign",
+  "subject": "Asunto del Email",
+  "variables": {
+    "companyName": "Tu Empresa",
+    "productName": "Tu Producto"
+  }
+}
+```
 
-MIT License
+### Crear Templates Personalizados
+
+1. Crea un nuevo archivo en `templates/`:
+```tsx
+import { Html, Head, Body, Container, Text, Button } from '@react-email/components';
+
+interface Props {
+  name?: string;
+  companyName?: string;
+}
+
+export default function MiTemplate({ name = 'Usuario', companyName = 'Mi Empresa' }: Props) {
+  return (
+    <Html>
+      <Head />
+      <Body>
+        <Container>
+          <Text>Hola {name},</Text>
+          <Text>Bienvenido a {companyName}</Text>
+          <Button href="https://ejemplo.com">Comenzar</Button>
+        </Container>
+      </Body>
+    </Html>
+  );
+}
+```
+
+## 🚀 Deployment
+
+### Vercel (Recomendado)
+
+1. Conecta tu repositorio a Vercel
+2. Configura las variables de entorno en Vercel:
+   - `RESEND_API_KEY`
+   - `NEXT_PUBLIC_APP_URL`
+3. Deploy automático en cada push
+
+### Variables de Entorno de Producción
+
+```env
+RESEND_API_KEY=tu_api_key_de_resend
+NEXT_PUBLIC_APP_URL=https://resend.growthbdm.com
+```
+
+## 📁 Estructura del Proyecto
+
+```
+react-email/
+├── apps/web/                 # Aplicación web principal
+│   ├── src/
+│   │   ├── app/             # App Router de Next.js
+│   │   ├── components/      # Componentes React
+│   │   └── styles/          # Estilos globales
+│   └── package.json
+├── templates/               # Templates de email personalizados
+├── lib/                     # Utilidades y helpers
+├── api/                     # Endpoints de API
+└── examples/                # Ejemplos de uso
+```
+
+## 🤝 Contribuir
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver `LICENSE.md` para más detalles.
+
+## 🆘 Soporte
+
+- [Documentación de React Email](https://react.email/docs)
+- [Documentación de Resend](https://resend.com/docs)
+- [Issues de GitHub](https://github.com/tu-usuario/tu-repo/issues)
+
+---
+
+<div align="center">
+  Hecho con ❤️ usando React Email y Resend
+</div>

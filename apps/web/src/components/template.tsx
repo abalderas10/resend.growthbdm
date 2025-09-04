@@ -15,7 +15,7 @@ export interface ExampleProps {
   author: string;
 }
 
-const DEMO_EMAIL_PREVIEW_BASE_URL = 'https://demo.react.email/preview';
+const DEMO_EMAIL_PREVIEW_BASE_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3001/templates' : 'https://demo.react.email/preview';
 const DEFAULT_IMAGE = '/static/covers/react-email.png';
 
 const imageLoader: ImageLoader = ({ src, width, quality }) => {
