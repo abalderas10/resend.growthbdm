@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
-  devIndicators: {
-    appIsrStatus: false,
-  },
   reactStrictMode: true,
   serverExternalPackages: ['@react-email/components', '@react-email/render'],
   async redirects() {
