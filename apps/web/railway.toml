@@ -1,6 +1,5 @@
 [build]
 builder = "NIXPACKS"
-watchPatterns = ["apps/web/**"]
 
 [build.nixpacksConfig]
 installCmd = "pnpm install"
