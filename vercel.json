@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "resend-react-email",
+  "name": "resend-growthbdm-email-system",
   "builds": [
     {
       "src": "apps/web/package.json",

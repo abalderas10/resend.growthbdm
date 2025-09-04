@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "resend-growthbdm",
+  "name": "resend-growthbdm-email-system",
   "framework": "nextjs",
   "buildCommand": "pnpm build",
   "devCommand": "pnpm dev",
