@@ -6,7 +6,7 @@
 <div align="center">Plataforma completa para crear y enviar emails masivos usando React Email y Resend API.<br />Incluye editor visual, templates personalizados y API REST.</div>
 <br />
 <div align="center">
-<a href="https://resend.growthbdm.com">Demo en Vivo</a>
+<a href="https://aliest.growthbdm.com">Demo en Vivo</a>
 <span> · </span>
 <a href="https://github.com/resend/react-email">React Email</a>
 <span> · </span>
@@ -131,7 +131,7 @@ export default function MiTemplate({ name = 'Usuario', companyName = 'Mi Empresa
 
 ```env
 RESEND_API_KEY=tu_api_key_de_resend
-NEXT_PUBLIC_APP_URL=https://resend.growthbdm.com
+NEXT_PUBLIC_APP_URL=https://aliest.growthbdm.com
 ```
 
 ## 📁 Estructura del Proyecto

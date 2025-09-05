@@ -97,6 +97,21 @@ const items = [
     name: 'Plaid / Verify Identity',
     author: 'zenorocha',
   },
+  {
+    path: 'invitations/mipim-invitation',
+    name: 'MIPIM / Invitation',
+    author: 'abalderas',
+  },
+  {
+    path: 'invitations/mipim-invitation-v2',
+    name: 'MIPIM / Invitation V2',
+    author: 'abalderas',
+  },
+  {
+    path: 'invitations/mipim-invitation-v3',
+    name: 'MIPIM / Invitation V3',
+    author: 'abalderas',
+  },
 ];
 
 const title = 'Templates — React Email';

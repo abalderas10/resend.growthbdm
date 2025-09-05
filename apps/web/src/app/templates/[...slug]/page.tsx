@@ -3,6 +3,11 @@ import { Suspense } from 'react';
 import { Heading } from '../../../components/heading';
 import { Text } from '../../../components/text';
 
+// Importaciones estáticas para los templates MIPIM
+import MipimInvitationV1 from '../../../emails/invitations/mipim-invitation';
+import MipimInvitationV2 from '../../../emails/invitations/mipim-invitation-v2';
+import MipimInvitationV3 from '../../../emails/invitations/mipim-invitation-v3';
+
 // Lista de templates disponibles (misma que en templates/page.tsx)
 const availableTemplates = [
   'magic-links/aws-verify-email',
@@ -23,6 +28,9 @@ const availableTemplates = [
   'welcome/stripe-welcome',
   'magic-links/notion-magic-link',
   'magic-links/plaid-verify-identity',
+  'invitations/mipim-invitation',
+  'invitations/mipim-invitation-v2',
+  'invitations/mipim-invitation-v3',
 ];
 
 interface TemplatePreviewPageProps {
@@ -72,8 +80,33 @@ export default async function TemplatePreviewPage({ params }: TemplatePreviewPag
 }
 
 function TemplateContent({ templatePath }: { templatePath: string }) {
-  // Por ahora mostramos información del template
-  // En una implementación completa, aquí cargaríamos y renderizaríamos el template real
+  // Renderizar templates MIPIM reales en un iframe para evitar conflictos de HTML
+  if (templatePath === 'invitations/mipim-invitation' || 
+      templatePath === 'invitations/mipim-invitation-v2' || 
+      templatePath === 'invitations/mipim-invitation-v3') {
+    return (
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold">Template: {templatePath}</h2>
+        <p className="text-gray-600 mb-4">
+          Vista previa del template de invitación MIPIM.
+        </p>
+        <div className="border rounded-lg overflow-hidden">
+          <iframe 
+            src={`/preview/${templatePath}`}
+            className="w-full h-96 border-0"
+            title={`Preview of ${templatePath}`}
+          />
+        </div>
+        <div className="bg-blue-50 p-4 rounded">
+          <p className="text-sm text-blue-700">
+            💡 Este es un template real de React Email para invitaciones MIPIM.
+          </p>
+        </div>
+      </div>
+    );
+  }
+  
+  // Para otros templates, mostrar placeholder
   return (
     <div className="space-y-4">
       <h2 className="text-2xl font-bold">Template: {templatePath}</h2>

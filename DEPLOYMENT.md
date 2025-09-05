@@ -30,7 +30,7 @@ Configura estas variables en el dashboard de Vercel:
 
 ```env
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-NEXT_PUBLIC_APP_URL=https://resend.growthbdm.com
+NEXT_PUBLIC_APP_URL=https://aliest.growthbdm.com
 ```
 
 **Pasos:**
@@ -44,7 +44,7 @@ NEXT_PUBLIC_APP_URL=https://resend.growthbdm.com
 ### 4. Configurar Dominio Personalizado
 
 1. En tu proyecto de Vercel, ve a Settings → Domains
-2. Agrega el dominio: `resend.growthbdm.com`
+2. Agrega el dominio: `aliest.growthbdm.com`
 3. Configura los DNS en tu proveedor de dominio:
 
 ```
@@ -61,7 +61,7 @@ Una vez configurado, cada push a la rama `canary` desplegará automáticamente.
 
 ### ✅ Checklist
 
-- [ ] El sitio carga en `https://resend.growthbdm.com`
+- [ ] El sitio carga en `https://aliest.growthbdm.com`
 - [ ] Los templates se muestran correctamente
 - [ ] La API `/api/send/bulk` responde
 - [ ] Las variables de entorno están configuradas
@@ -71,12 +71,12 @@ Una vez configurado, cada push a la rama `canary` desplegará automáticamente.
 
 1. **Probar la interfaz web:**
    ```
-   https://resend.growthbdm.com
+   https://aliest.growthbdm.com
    ```
 
 2. **Probar la API de envío masivo:**
    ```bash
-   curl -X POST https://resend.growthbdm.com/api/send/bulk \
+   curl -X POST https://aliest.growthbdm.com/api/send/bulk \
      -H "Content-Type: application/json" \
      -d '{
        "recipients": [

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-09-05T19:35:07.227Z",
+  "success": true,
+  "recipient": "abalderas10@gmail.com",
+  "sender": "noreply@aliest.growthbdm.com",
+  "subject": "🚀 Prueba de React Email - Configuración Exitosa",
+  "result": {
+    "data": {
+      "id": "91976d6a-9d0d-48cb-b6cb-1fabc65f8f19"
+    },
+    "error": null
+  },
+  "message": "Correo enviado exitosamente con plantilla React Email"
+}

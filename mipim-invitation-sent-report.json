@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-05T05:54:09.161Z",
+  "success": true,
+  "recipient": "abalderas10@gmail.com",
+  "sender": "noreply@aliest.growthbdm.com",
+  "subject": "🎯 Invitación Exclusiva MIPIM 2026 México - Confirma tu Asistencia",
+  "magicLinkUrl": "https://mipim.aliest.growthbdm.com/confirm/YWJhbGRlcmFzMTBAZ21haWwuY29tOm1pcGltMjAyNjoxNzU3MDUxNjQ4MTEw",
+  "result": {
+    "data": {
+      "id": "e73b899f-a02e-4b97-8f54-84ad6969c06e"
+    },
+    "error": null
+  },
+  "message": "Invitación MIPIM enviada exitosamente con plantilla completa"
+}

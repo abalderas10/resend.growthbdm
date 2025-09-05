@@ -15,7 +15,7 @@
   ],
   "env": {
     "RESEND_API_KEY": "re_5qZePDtW_K4oimtTzkwMW6sMPvLoXYyUC",
-    "NEXT_PUBLIC_APP_URL": "https://resend.growthbdm.com"
+    "NEXT_PUBLIC_APP_URL": "https://aliest.growthbdm.com"
   },
   "functions": {
     "apps/web/src/app/api/**/*.ts": {

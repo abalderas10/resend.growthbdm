@@ -1,11 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { MassEmailSender, createCampaign, EmailRecipient } from '../lib/mass-email-sender';
 import MarketingCampaignEmail from '../templates/marketing-campaign';
+import { InvitationEmailV2 } from '../apps/invitacionMIPIM';
 import { createElement } from 'react';
 
 // Tipos para la API
 interface SendCampaignRequest {
-  campaignType: 'marketing' | 'newsletter' | 'notification';
+  campaignType: 'marketing' | 'newsletter' | 'notification' | 'mipim';
   subject: string;
   recipients: EmailRecipient[];
   templateData: {
@@ -15,6 +16,11 @@ interface SendCampaignRequest {
     ctaText?: string;
     ctaUrl?: string;
     logoUrl?: string;
+    // Campos específicos para MIPIM
+    magicLinkUrl?: string;
+    eventDate?: string;
+    eventLocation?: string;
+    customMessage?: string;
   };
   options?: {
     fromEmail?: string;
@@ -213,6 +219,15 @@ function getTemplate(campaignType: string, templateData: any) {
         ctaUrl: templateData.ctaUrl,
         logoUrl: templateData.logoUrl,
         unsubscribeUrl: templateData.unsubscribeUrl || '#'
+      });
+    
+    case 'mipim':
+      return createElement(InvitationEmailV2, {
+        recipientEmail: templateData.recipientEmail || '',
+        magicLinkUrl: templateData.magicLinkUrl || '#',
+        eventDate: templateData.eventDate,
+        eventLocation: templateData.eventLocation,
+        customMessage: templateData.customMessage
       });
     
     case 'newsletter':

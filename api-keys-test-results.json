@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-09-05T05:35:28.016Z",
+  "summary": {
+    "total": 3,
+    "valid": 0,
+    "invalid": 2,
+    "recommendedKey": null
+  },
+  "results": [
+    {
+      "source": ".env.local y apps/web/.env",
+      "apiKey": "re_dasBV1Zg_AMi...K8ZX",
+      "fullKey": "re_dasBV1Zg_AMiUPvNEbckHW61U3hJYK8ZX",
+      "length": 36,
+      "validFormat": true,
+      "connectionTest": "failed",
+      "domainTest": null,
+      "error": "domainsResponse.data.map is not a function",
+      "errorType": "unknown"
+    },
+    {
+      "source": ".env (raíz)",
+      "apiKey": "re_new_api_key_...ocal",
+      "fullKey": "re_new_api_key_from_env_local",
+      "length": 29,
+      "validFormat": true,
+      "connectionTest": "unexpected_response",
+      "domainTest": null,
+      "error": "Respuesta inesperada de la API"
+    },
+    {
+      "source": "vercel.json",
+      "apiKey": "re_5qZePDtW_K4o...YyUC",
+      "fullKey": "re_5qZePDtW_K4oimtTzkwMW6sMPvLoXYyUC",
+      "length": 36,
+      "validFormat": true,
+      "connectionTest": "failed",
+      "domainTest": null,
+      "error": "domainsResponse.data.map is not a function",
+      "errorType": "unknown"
+    }
+  ]
+}

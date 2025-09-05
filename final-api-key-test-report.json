@@ -1,0 +1,84 @@
+{
+  "timestamp": "2025-09-05T05:38:01.099Z",
+  "summary": {
+    "totalTested": 3,
+    "validKeys": 2,
+    "invalidKeys": 1,
+    "keysWithTargetDomain": 2,
+    "recommendedKey": {
+      "source": ".env.local y apps/web/.env",
+      "apiKey": "re_dasBV1Zg_AMi...K8ZX",
+      "fullKey": "re_dasBV1Zg_AMiUPvNEbckHW61U3hJYK8ZX",
+      "length": 36,
+      "validFormat": true,
+      "isValid": true,
+      "domains": [
+        {
+          "id": "986fc2c8-9f9e-415f-be41-5eb1c33e84c9",
+          "name": "aliest.growthbdm.com",
+          "status": "verified",
+          "region": "us-east-1",
+          "created_at": "2025-09-05 01:51:11.836035+00"
+        }
+      ],
+      "hasTargetDomain": true,
+      "error": null,
+      "responseTime": 528
+    }
+  },
+  "results": [
+    {
+      "source": ".env.local y apps/web/.env",
+      "apiKey": "re_dasBV1Zg_AMi...K8ZX",
+      "fullKey": "re_dasBV1Zg_AMiUPvNEbckHW61U3hJYK8ZX",
+      "length": 36,
+      "validFormat": true,
+      "isValid": true,
+      "domains": [
+        {
+          "id": "986fc2c8-9f9e-415f-be41-5eb1c33e84c9",
+          "name": "aliest.growthbdm.com",
+          "status": "verified",
+          "region": "us-east-1",
+          "created_at": "2025-09-05 01:51:11.836035+00"
+        }
+      ],
+      "hasTargetDomain": true,
+      "error": null,
+      "responseTime": 528
+    },
+    {
+      "source": ".env (raíz)",
+      "apiKey": "re_new_api_key_...ocal",
+      "fullKey": "re_new_api_key_from_env_local",
+      "length": 29,
+      "validFormat": true,
+      "isValid": false,
+      "domains": [],
+      "hasTargetDomain": false,
+      "error": "Estructura de respuesta inesperada",
+      "responseTime": 118
+    },
+    {
+      "source": "vercel.json",
+      "apiKey": "re_5qZePDtW_K4o...YyUC",
+      "fullKey": "re_5qZePDtW_K4oimtTzkwMW6sMPvLoXYyUC",
+      "length": 36,
+      "validFormat": true,
+      "isValid": true,
+      "domains": [
+        {
+          "id": "986fc2c8-9f9e-415f-be41-5eb1c33e84c9",
+          "name": "aliest.growthbdm.com",
+          "status": "verified",
+          "region": "us-east-1",
+          "created_at": "2025-09-05 01:51:11.836035+00"
+        }
+      ],
+      "hasTargetDomain": true,
+      "error": null,
+      "responseTime": 148
+    }
+  ],
+  "conclusion": "READY_TO_USE"
+}

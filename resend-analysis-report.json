@@ -1,0 +1,116 @@
+{
+  "timestamp": "2025-09-05T05:34:14.328Z",
+  "apiKeys": {},
+  "envFiles": {
+    ".env.local": {
+      "exists": true,
+      "hasApiKey": true,
+      "apiKey": "re_dasBV1Zg_AMiUPvNEbckHW61U3hJYK8ZX",
+      "apiKeyLength": 36,
+      "isValidFormat": true,
+      "content": "# Configuración de Resend para envío de correos masivos\n# IMPORTANTE: Reemplaza 'tu_api_key_aqui' con tu API key real de Resend\nRESEND_API_KEY=re_dasBV1Zg_AMiUPvNEbckHW61U3hJYK8ZX\n\n# Configuración de la aplicación\nNEXT_PUBLIC_APP_URL=http://localhost:3001\n\n# Configuración de límites de envío\nMAX_EMAILS_PER_BATCH=50\nMAX_EMAILS_PER_HOUR=1000\nDELAY_BETWEEN_BATCHES=2000\n\n# Configuración de remitente por defecto\nDEFAULT_FROM_EMAIL=noreply@aliest.growthbdm.com\nFROM_EMAIL=noreply@aliest.growthbdm.com\nDEFAULT_FROM_NAME=Tu Empresa\n\n# Configuración de webhooks (opcional)\nWEBHOOK_SECRET=tu_webhook_secret_aqui"
+    },
+    "apps/web/.env.local": {
+      "exists": false
+    },
+    "apps/web/.env": {
+      "exists": true,
+      "hasApiKey": true,
+      "apiKey": "re_dasBV1Zg_AMiUPvNEbckHW61U3hJYK8ZX",
+      "apiKeyLength": 36,
+      "isValidFormat": true,
+      "content": "# Configuración de Resend para envío de correos masivos\nRESEND_API_KEY=re_dasBV1Zg_AMiUPvNEbckHW61U3hJYK8ZX\n\n# Configuración de la aplicación\nNEXT_PUBLIC_APP_URL=https://web-production-e593.up.railway.app\n\n# Configuración de seguridad para API\nAPI_SECRET_KEY=mipim_secret_key_2025_growthbdm\n\n# Configuración de límites de envío\nMAX_EMAILS_PER_BATCH=50\nMAX_EMAILS_PER_HOUR=1000\nMAX_RECIPIENTS_PER_CAMPAIGN=1000\nDELAY_BETWEEN_BATCHES=2000\n\n# Configuración de remitente por defecto\nDEFAULT_FROM_EMAIL=noreply@aliest.growthbdm.com\nDEFAULT_FROM_NAME=GrowthBDM\nFROM_EMAIL=noreply@aliest.growthbdm.com\n\n# Configuración de webhooks (opcional)\nWEBHOOK_SECRET=webhook_secret_mipim_2025\n\n# Configuración específica para MIPIM\nMIPIM_EVENT_DATE=10 de Septiembre, 2025\nMIPIM_EVENT_LOCATION=Neuchatel, Ciudad de México\nMIPIM_MAGIC_LINK_BASE=https://mipim.aliest.growthbdm.com"
+    },
+    ".env": {
+      "exists": true,
+      "hasApiKey": true,
+      "apiKey": "re_new_api_key_from_env_local",
+      "apiKeyLength": 29,
+      "isValidFormat": true,
+      "content": "# Configuración de Resend para envío de correos masivos\nRESEND_API_KEY=re_new_api_key_from_env_local\n\n# Configuración de la aplicación\nNEXT_PUBLIC_APP_URL=https://web-production-e593.up.railway.app\n\n# Configuración de seguridad para API\nAPI_SECRET_KEY=mipim_secret_key_2025_growthbdm\n\n# Configuración de límites de envío\nMAX_EMAILS_PER_BATCH=50\nMAX_EMAILS_PER_HOUR=1000\nMAX_RECIPIENTS_PER_CAMPAIGN=1000\nDELAY_BETWEEN_BATCHES=2000\n\n# Configuración de remitente por defecto\nDEFAULT_FROM_EMAIL=noreply@aliest.growthbdm.com\nDEFAULT_FROM_NAME=GrowthBDM\nFROM_EMAIL=noreply@aliest.growthbdm.com\n\n# Configuración de webhooks (opcional)\nWEBHOOK_SECRET=webhook_secret_mipim_2025\n\n# Configuración específica para MIPIM\nMIPIM_EVENT_DATE=10 de Septiembre, 2025\nMIPIM_EVENT_LOCATION=Neuchatel, Ciudad de México\nMIPIM_MAGIC_LINK_BASE=https://mipim.aliest.growthbdm.com"
+    }
+  },
+  "configFiles": {
+    "vercel": {
+      "exists": true,
+      "hasApiKey": true,
+      "apiKey": "re_5qZePDtW_K4oimtTzkwMW6sMPvLoXYyUC",
+      "config": {
+        "version": 2,
+        "name": "resend-growthbdm-email-system",
+        "framework": "nextjs",
+        "buildCommand": "pnpm build",
+        "devCommand": "pnpm dev",
+        "installCommand": "pnpm install",
+        "outputDirectory": ".next",
+        "env": {
+          "RESEND_API_KEY": "re_5qZePDtW_K4oimtTzkwMW6sMPvLoXYyUC",
+          "NEXT_PUBLIC_APP_URL": "https://aliest.growthbdm.com"
+        },
+        "functions": {
+          "src/app/api/**/*.ts": {
+            "maxDuration": 30
+          }
+        },
+        "headers": [
+          {
+            "source": "/api/(.*)",
+            "headers": [
+              {
+                "key": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "key": "Access-Control-Allow-Methods",
+                "value": "GET, POST, PUT, DELETE, OPTIONS"
+              },
+              {
+                "key": "Access-Control-Allow-Headers",
+                "value": "Content-Type, Authorization"
+              }
+            ]
+          }
+        ],
+        "rewrites": [
+          {
+            "source": "/templates/:path*",
+            "destination": "/templates/:path*"
+          }
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "package.json": {
+      "resendVersion": "4.3.0"
+    },
+    "apps/web/package.json": {
+      "resendVersion": "4.3.0",
+      "reactEmailComponents": "workspace:*",
+      "nextVersion": "15.3.3"
+    }
+  },
+  "apiRoutes": {
+    "apps/web/src/app/api/send-mipim-invitations/route.ts": {
+      "exists": true,
+      "hasResendImport": true,
+      "hasApiKeyUsage": true,
+      "hasResendInstance": true,
+      "content": "import { NextRequest, NextResponse } from 'next/server';\nimport { Resend } from 'resend';\n\n// Inicializar Resend solo si hay una clave válida\nlet resend: Resend | null = null;\nif (process.env.RESEND_API_KEY && !process.env.RESEND_API_KEY.includes('ejemplo')) {\n  resend = new Resend(process.env.RESEND_API_KEY);\n}\n\ninterface Recipient {\n  email: string;\n  name: string;\n  magicLinkUrl?: string;\n}\n\ninterface MipimInvitationRequest {\n  subject: string;\n  recipients: Recipient[];\n  eventDate?: string;..."
+    },
+    "apps/web/src/app/api/send/test/route.ts": {
+      "exists": true,
+      "hasResendImport": true,
+      "hasApiKeyUsage": true,
+      "hasResendInstance": true,
+      "content": "import { createClient } from '@supabase/supabase-js';\r\nimport { type NextRequest, NextResponse } from 'next/server';\r\nimport { Resend } from 'resend';\r\nimport { z } from 'zod';\r\n\r\nexport const dynamic = 'force-dynamic';\r\n\r\nexport function OPTIONS() {\r\n  return Promise.resolve(NextResponse.json({}));\r\n}\r\n\r\nconst bodySchema = z.object({\r\n  to: z.string(),\r\n  subject: z.string(),\r\n  html: z.string(),\r\n});\r\n\r\nexport async function POST(req: NextRequest) {\r\n  const resend = new Resend(process.env.RES..."
+    }
+  },
+  "issues": [
+    "API devuelve respuesta inesperada",
+    "Múltiples API Keys diferentes en archivos de configuración"
+  ],
+  "recommendations": [
+    "Unificar todas las API Keys para usar la misma en todos los archivos"
+  ]
+}

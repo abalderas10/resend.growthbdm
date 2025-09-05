@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-09-05T05:36:28.647Z",
+  "apiKey": "re_dasBV1Zg_AMi...K8ZX",
+  "source": "env_local_and_web",
+  "responseTime": 544,
+  "response": {
+    "data": {
+      "object": "list",
+      "has_more": false,
+      "data": [
+        {
+          "id": "986fc2c8-9f9e-415f-be41-5eb1c33e84c9",
+          "name": "aliest.growthbdm.com",
+          "status": "verified",
+          "created_at": "2025-09-05 01:51:11.836035+00",
+          "region": "us-east-1"
+        }
+      ]
+    },
+    "error": null
+  },
+  "responseType": "object",
+  "responseKeys": [
+    "data",
+    "error"
+  ],
+  "responseStringified": "{\n  \"data\": {\n    \"object\": \"list\",\n    \"has_more\": false,\n    \"data\": [\n      {\n        \"id\": \"986fc2c8-9f9e-415f-be41-5eb1c33e84c9\",\n        \"name\": \"aliest.growthbdm.com\",\n        \"status\": \"verified\",\n        \"created_at\": \"2025-09-05 01:51:11.836035+00\",\n        \"region\": \"us-east-1\"\n      }\n    ]\n  },\n  \"error\": null\n}"
+}
