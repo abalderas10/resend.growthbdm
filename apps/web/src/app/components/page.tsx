@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { componentsStructure } from '../../../components/structure';
-import PageTransition from '../../components/page-transition';
-import { Spotlight } from '../../components/spotlight';
+// import PageTransition from '../../components/page-transition';
+// import { Spotlight } from '../../components/spotlight';
 import { slugify } from '../../utils/slugify';
 
 const title = 'Components - React Email';
@@ -36,7 +36,7 @@ const ComponentsPage = async () => (
         <div className="border-r border-r-slate-4" />
       </div>
     </div>
-    <PageTransition className="pb-10" key="about" tag="main">
+    <main className="pb-10">
       <div className="flex w-full flex-col gap-2 px-6 pt-16 pb-10 md:px-8">
         <h1 className="font-bold text-2xl text-slate-12">Components</h1>
         <p>
@@ -72,7 +72,7 @@ const ComponentsPage = async () => (
               key={category.name}
               tabIndex={0}
             >
-              <Spotlight
+              <div
                 className={classNames(
                   'relative isolate flex cursor-pointer flex-col justify-end rounded-md bg-black p-4 group-focus:ring group-focus:ring-slate-2 md:transition-transform md:duration-[240ms] md:ease-[cubic-bezier(.36,.66,.6,1)]',
                   {
@@ -97,12 +97,12 @@ const ComponentsPage = async () => (
                   {category.components.length} component
                   {category.components.length > 1 && 's'}
                 </span>
-              </Spotlight>
+              </div>
             </Link>
           );
         })}
       </div>
-    </PageTransition>
+    </main>
   </>
 );
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Anchor } from '../../components/anchor';
 import { Heading } from '../../components/heading';
-import PageTransition from '../../components/page-transition';
+// import PageTransition from '../../components/page-transition';
 import { Template } from '../../components/template';
 import { Text } from '../../components/text';
 
@@ -134,11 +134,7 @@ const Templates = () => (
       priority
       src="/static/bg.png"
     />
-    <PageTransition
-      className="mx-auto flex max-w-3xl flex-col justify-center px-1 py-10 md:px-0"
-      key="about"
-      tag="main"
-    >
+    <main className="mx-auto flex max-w-3xl flex-col justify-center px-1 py-10 md:px-0">
       <div className="mb-12 text-pretty px-6 md:max-w-[46rem] md:px-0 md:text-center">
         <Heading className="text-white" size="6">
           Templates
@@ -169,7 +165,7 @@ const Templates = () => (
           <Template key={item.path} {...item} />
         ))}
       </div>
-    </PageTransition>
+    </main>
   </>
 );
 

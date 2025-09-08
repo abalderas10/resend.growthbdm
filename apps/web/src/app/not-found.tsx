@@ -1,4 +1,4 @@
-import PageTransition from '@/components/page-transition';
+// import PageTransition from '@/components/page-transition';
 
 export const metadata = {
   title: '404 Not found',
@@ -15,11 +15,7 @@ const NotFound = () => (
         <div className="border-r border-r-slate-4" />
       </div>
     </div>
-    <PageTransition
-      className="flex w-full flex-col items-center justify-center gap-2 px-8 pt-16 pb-10 text-center"
-      key="not-found"
-      tag="main"
-    >
+    <main className="flex h-screen w-full flex-col items-center justify-center gap-4 px-6 text-center">
       <h1 className="font-bold text-2xl text-slate-12 uppercase italic">
         <span className="font-mono">404</span> <br />
         Not Found
@@ -28,7 +24,7 @@ const NotFound = () => (
         <p>This page does not exist.</p>
         <p>Please check the URL and try again.</p>
       </div>
-    </PageTransition>
+    </main>
   </>
 );
 

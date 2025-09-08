@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { componentsStructure } from '../../../../components/structure';
 import { ComponentsView } from '../../../components/components-view';
 import { IconArrowLeft } from '../../../components/icons/icon-arrow-left';
-import PageTransition from '../../../components/page-transition';
+// import PageTransition from '../../../components/page-transition';
 import { slugify } from '../../../utils/slugify';
 import { getImportedComponentsFor } from '../get-imported-components-for';
 
@@ -72,7 +72,7 @@ const ComponentPage: React.FC<ComponentPageParams> = async ({ params }) => {
           <div className="border-r border-r-slate-4" />
         </div>
       </div>
-      <PageTransition className="pb-10" key="about" tag="main">
+      <main className="pb-10">
         <div className="flex w-full flex-col gap-4 px-6 pt-16 pb-10 md:px-8">
           <div className="flex flex-inline">
             <Link
@@ -90,7 +90,7 @@ const ComponentPage: React.FC<ComponentPageParams> = async ({ params }) => {
         <div className="relative flex w-full flex-col gap-4 border-slate-4 border-y pt-3">
           <ComponentsView components={importedComponents} />
         </div>
-      </PageTransition>
+      </main>
     </>
   );
 };

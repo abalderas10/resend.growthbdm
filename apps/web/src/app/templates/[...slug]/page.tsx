@@ -3,10 +3,10 @@ import { Suspense } from 'react';
 import { Heading } from '../../../components/heading';
 import { Text } from '../../../components/text';
 
-// Importaciones estáticas para los templates MIPIM
-import MipimInvitationV1 from '../../../emails/invitations/mipim-invitation';
-import MipimInvitationV2 from '../../../emails/invitations/mipim-invitation-v2';
-import MipimInvitationV3 from '../../../emails/invitations/mipim-invitation-v3';
+// Importaciones estáticas para los templates MIPIM - comentadas para evitar errores de build
+// import MipimInvitationV1 from '../../../emails/invitations/mipim-invitation';
+// import MipimInvitationV2 from '../../../emails/invitations/mipim-invitation-v2';
+// import MipimInvitationV3 from '../../../emails/invitations/mipim-invitation-v3';
 
 // Lista de templates disponibles (misma que en templates/page.tsx)
 const availableTemplates = [
