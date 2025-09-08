@@ -11,6 +11,8 @@ import {
   Preview,
   Section,
   Text,
+  Row,
+  Column,
 } from '@react-email/components';
 import * as React from 'react';
 
@@ -39,42 +41,58 @@ export const MipimInvitationEmail = ({
         <Container style={container}>
           {/* Header with Aliest Growth Logo */}
           <Section style={header}>
-            <Img
-              src="https://mail.proton.me/api/core/v4/images?Url=https%3A%2F%2Fmpeimoornrbahdpszhor.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Femail-images%2Flogos%2FaliestGrowth.png&DryRun=0&UID=2n6j7sk3qh2uxgugzvmn6vmwq2fg5xeq"
-              width="200"
-              height="60"
-              alt="Aliest Growth"
-              style={logo}
-            />
+            <Row>
+              <Column align="center">
+                <Img
+                  src="https://mpeimoornrbahdpszhor.supabase.co/storage/v1/object/public/email-images/logos/aliestGrowth.png"
+                  width="200"
+                  height="60"
+                  alt="Aliest Growth"
+                  style={logo}
+                />
+              </Column>
+            </Row>
           </Section>
 
           {/* Main Title with MIPIM Logo */}
           <Section style={titleSection}>
-            <Heading style={h1}>
-              Promoción{' '}
-              <Img
-                src="https://mail.proton.me/api/core/v4/images?Url=https%3A%2F%2Fmpeimoornrbahdpszhor.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Femail-images%2Flogos%2Fmipim.png&DryRun=0&UID=2n6j7sk3qh2uxgugzvmn6vmwq2fg5xeq"
-                width="120"
-                height="40"
-                alt="MIPIM"
-                style={inlineLogo}
-              />{' '}
-              La Feria de Real Estate más Grande del Mundo
-            </Heading>
+            <Row>
+              <Column align="center">
+                <Heading as="h1" style={h1}>
+                  Promoción{' '}
+                  <Img
+                    src="https://mpeimoornrbahdpszhor.supabase.co/storage/v1/object/public/email-images/logos/mipim.png"
+                    width="120"
+                    height="40"
+                    alt="MIPIM"
+                    style={inlineLogo}
+                  />{' '}
+                  La Feria de Real Estate más Grande del Mundo
+                </Heading>
+              </Column>
+            </Row>
           </Section>
 
           {/* Subtitle */}
           <Section style={subtitleSection}>
-            <Heading style={h2}>
-              Aliest Growth - Oportunidades de Desarrollo e Inversión en Europa y México
-            </Heading>
+            <Row>
+              <Column align="center">
+                <Heading as="h2" style={h2}>
+                  Aliest Growth - Oportunidades de Desarrollo e Inversión en Europa y México
+                </Heading>
+              </Column>
+            </Row>
           </Section>
 
           {/* Event Details */}
           <Section style={eventDetailsSection}>
-            <Heading style={h3}>
-              {eventDate} | 8:30 a.m. | {eventLocation}
-            </Heading>
+            <Row>
+              <Column align="center">
+                <Heading as="h3" style={h3}>
+                  {eventDate} | 8:30 a.m. | {eventLocation}
+                </Heading>
+              </Column>
+            </Row>
           </Section>
 
           {/* Main Content */}
@@ -101,9 +119,13 @@ export const MipimInvitationEmail = ({
 
             {/* CTA Button */}
             <Section style={buttonContainer}>
-              <Button style={button} href={magicLinkUrl}>
-                Confirmar asistencia y Generar Boleto
-              </Button>
+              <Row>
+                <Column align="center">
+                  <Button style={button} href={magicLinkUrl}>
+                    Confirmar asistencia y Generar Boleto
+                  </Button>
+                </Column>
+              </Row>
             </Section>
 
             <Text style={text}>
@@ -116,29 +138,31 @@ export const MipimInvitationEmail = ({
 
             {/* Speakers Section */}
             <Section style={benefitsSection}>
-              <Text style={benefitItem}>
-                <strong>Juan Bravo - MIPIM Latinoamerica:</strong><br/>
-                Oportunidades de Inversión y Negocios entre México y el Mundo
-              </Text>
+              <Row>
+                <Column>
+                  <Heading as="h3" style={h3}>Ponentes Destacados</Heading>
+                  
+                  <Text style={benefitItem}>
+                    <strong>Juan Bravo - MIPIM Latinoamerica:</strong><br/>
+                    Oportunidades de Inversión y Negocios entre México y el Mundo
+                  </Text>
 
-              <Text style={benefitItem}>
-                <strong>Hines - Desarrollador Inmobiliario Global:</strong><br/>
-                Trayectoria, Proyectos Emblemáticos y Visión del Futuro Inmobiliario
-              </Text>
+                  <Text style={benefitItem}>
+                    <strong>Hines - Desarrollador Inmobiliario Global:</strong><br/>
+                    Trayectoria, Proyectos Emblemáticos y Visión del Futuro Inmobiliario
+                  </Text>
 
-              <Text style={text}>
-                <strong>ponentes:</strong>
-              </Text>
+                  <Text style={benefitItem}>
+                    <strong>Luis Méndez Trillo - Presidente de Coldwell Banker Commercial:</strong><br/>
+                    Mercado inmobiliario de oficinas e industrial
+                  </Text>
 
-              <Text style={benefitItem}>
-                <strong>Luis Méndez Trillo - Presidente de Coldwell Banker Commercial:</strong><br/>
-                Mercado inmobiliario de oficinas e industrial
-              </Text>
-
-              <Text style={benefitItem}>
-                <strong>Iñigo Arturo Aragón - Subsecretario de Fomento Económico y Atracción a la Inversión del Estado de Oaxaca:</strong><br/>
-                Oportunidades Inversión en el Corredor Interoceánico del Istmo de Tehuantepec
-              </Text>
+                  <Text style={benefitItem}>
+                    <strong>Iñigo Arturo Aragón - Subsecretario de Fomento Económico y Atracción a la Inversión del Estado de Oaxaca:</strong><br/>
+                    Oportunidades Inversión en el Corredor Interoceánico del Istmo de Tehuantepec
+                  </Text>
+                </Column>
+              </Row>
             </Section>
 
             {/* Event Details */}
@@ -217,7 +241,7 @@ export const MipimInvitationEmail = ({
 
 // Styles
 const main = {
-  background: 'linear-gradient(135deg, #0066CC 0%, #003366 100%)',
+  backgroundColor: '#ffffff',
   fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
   minHeight: '100vh',
   padding: '20px 0',
@@ -226,15 +250,16 @@ const main = {
 const container = {
   backgroundColor: '#ffffff',
   margin: '0 auto',
-  padding: '20px 0 48px',
+  padding: '20px',
   marginBottom: '64px',
   maxWidth: '600px',
 };
 
 const header = {
-  padding: '20px 30px',
-  backgroundColor: '#0066CC',
+  background: 'linear-gradient(135deg, #1e40af 0%, #3b82f6 100%)',
+  padding: '40px 30px',
   textAlign: 'center' as const,
+  borderRadius: '12px 12px 0 0',
 };
 
 const logo = {
@@ -246,7 +271,7 @@ const content = {
 };
 
 const h1 = {
-  color: '#0066CC',
+  color: '#1e40af',
   fontSize: '28px',
   fontWeight: 'bold',
   margin: '0 0 20px',
@@ -261,7 +286,7 @@ const h2 = {
 };
 
 const h3 = {
-  color: '#0066CC',
+  color: '#1e40af',
   fontSize: '18px',
   fontWeight: 'bold',
   margin: '20px 0 10px',
@@ -289,10 +314,10 @@ const inlineLogo = {
 };
 
 const text = {
-  color: '#333333',
+  color: '#374151',
   fontSize: '16px',
   lineHeight: '1.6',
-  margin: '0 0 16px',
+  margin: '16px 0',
 };
 
 const customMessageSection = {
@@ -330,16 +355,19 @@ const buttonContainer = {
 };
 
 const button = {
-  backgroundColor: '#0066CC',
-  borderRadius: '6px',
+  backgroundColor: '#1e40af',
+  borderRadius: '8px',
   color: '#ffffff',
   fontSize: '18px',
-  fontWeight: 'bold',
+  fontWeight: '600',
   textDecoration: 'none',
   textAlign: 'center' as const,
   display: 'inline-block',
-  padding: '14px 28px',
+  padding: '16px 32px',
+  margin: '20px 0',
+  boxShadow: '0 4px 12px rgba(30, 64, 175, 0.4)',
   border: 'none',
+  cursor: 'pointer',
 };
 
 const benefitsSection = {
@@ -347,10 +375,12 @@ const benefitsSection = {
 };
 
 const benefitItem = {
-  color: '#333333',
+  color: '#1f2937',
   fontSize: '16px',
   lineHeight: '1.6',
-  margin: '0 0 12px',
+  margin: '12px 0',
+  paddingLeft: '8px',
+  fontWeight: '400',
 };
 
 const hr = {
@@ -367,8 +397,11 @@ const footer = {
 };
 
 const link = {
-  color: '#0066CC',
+  color: '#1e40af',
   textDecoration: 'underline',
+  fontSize: '14px',
+  wordBreak: 'break-all' as const,
+  fontWeight: '500',
 };
 
 export default MipimInvitationEmail;

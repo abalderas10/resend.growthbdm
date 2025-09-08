@@ -2,9 +2,9 @@
   "version": 2,
   "name": "resend-growthbdm-email-system",
   "framework": "nextjs",
-  "buildCommand": "pnpm build",
-  "devCommand": "pnpm dev",
-  "installCommand": "pnpm install",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
   "outputDirectory": ".next",
   "env": {
     "RESEND_API_KEY": "re_5qZePDtW_K4oimtTzkwMW6sMPvLoXYyUC",

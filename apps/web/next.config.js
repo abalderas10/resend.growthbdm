@@ -3,6 +3,16 @@
 module.exports = {
   reactStrictMode: true,
   serverExternalPackages: ['@react-email/components', '@react-email/render'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'mpeimoornrbahdpszhor.supabase.co',
+        port: '',
+        pathname: '/storage/v1/object/public/**',
+      },
+    ],
+  },
   async redirects() {
     return [
       {

@@ -212,20 +212,33 @@ export default async function handler(
 }
 
 /**
- * Función helper para generar magic links únicos
+ * Función helper para generar magic links únicos con nombre y empresa
  */
-export function generateMagicLink(baseUrl: string, recipientEmail: string, eventId: string = 'mipim2026'): string {
-  const token = Buffer.from(`${recipientEmail}:${eventId}:${Date.now()}`).toString('base64url');
+export function generateMagicLink(
+  baseUrl: string, 
+  recipientEmail: string, 
+  recipientName: string = '', 
+  recipientCompany: string = '', 
+  eventId: string = 'mipim2026'
+): string {
+  const tokenData = `${recipientEmail}:${eventId}:${Date.now()}:${recipientName}:${recipientCompany}`;
+  const token = Buffer.from(tokenData).toString('base64url');
   return `${baseUrl}/ticket/${token}`;
 }
 
 /**
- * Función helper para validar magic links
+ * Función helper para validar magic links con nombre y empresa
  */
-export function validateMagicLink(token: string): { valid: boolean; email?: string; eventId?: string } {
+export function validateMagicLink(token: string): { 
+  valid: boolean; 
+  email?: string; 
+  eventId?: string; 
+  name?: string; 
+  company?: string; 
+} {
   try {
     const decoded = Buffer.from(token, 'base64url').toString();
-    const [email, eventId, timestamp] = decoded.split(':');
+    const [email, eventId, timestamp, name = '', company = ''] = decoded.split(':');
     
     // Verificar que el token no sea muy antiguo (ej: 30 días)
     const tokenAge = Date.now() - parseInt(timestamp);
@@ -235,7 +248,7 @@ export function validateMagicLink(token: string): { valid: boolean; email?: stri
       return { valid: false };
     }
     
-    return { valid: true, email, eventId };
+    return { valid: true, email, eventId, name, company };
   } catch (error) {
     return { valid: false };
   }

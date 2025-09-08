@@ -9,23 +9,27 @@
     "test:watch": "vitest --bail 1",
     "test": "vitest run --bail 1",
     "pattern:dev": "email dev -d ./components",
-    "pattern:build": "email build -d ./components"
+    "pattern:build": "email build -d ./components",
+    "deploy": "npx vercel --prod",
+    "deploy:preview": "npx vercel"
   },
   "dependencies": {
     "@babel/parser": "7.27.0",
     "@babel/preset-typescript": "7.27.0",
     "@babel/traverse": "7.27.0",
-    "@react-email/components": "workspace:*",
+    "@react-email/components": "^0.0.25",
     "@responsive-email/react-email": "0.0.4",
     "@supabase/supabase-js": "2.49.4",
+    "@types/qrcode.react": "^3.0.0",
     "@vercel/analytics": "1.5.0",
     "framer-motion": "12.7.4",
     "lucide-react": "^0.492.0",
     "next": "15.3.3",
     "prism-react-renderer": "2.4.1",
+    "qrcode.react": "^4.2.0",
     "react": "^19",
     "react-dom": "^19",
-    "react-email": "workspace:*",
+    "react-email": "^3.0.1",
     "resend": "4.3.0",
     "vaul": "1.1.2"
   },
@@ -38,7 +42,7 @@
     "@radix-ui/react-tooltip": "1.2.3",
     "@types/babel__core": "7.20.5",
     "@types/babel__traverse": "7.20.7",
-    "tsconfig": "workspace:*",
+    "@types/node": "^22.0.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "10.4.21",
@@ -46,7 +50,7 @@
     "html-to-ast": "0.0.6",
     "postcss": "8.5.3",
     "tailwindcss": "3.4.3",
-    "@types/node": "^22.0.0",
+
     "typescript": "5.8.3",
     "webpack": "5.99.6",
     "zod": "3.24.3"
